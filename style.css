@@ -36,8 +36,14 @@
 }
 
 #pixel-board{
-
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
+
+
 
 .pixel{
     width: 40px;
@@ -45,4 +51,8 @@
     border: 1px;
     border-color: black;
     border-style: solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
 }
