@@ -36,11 +36,14 @@
 }
 
 #pixel-board{
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    border: 1px solid black;
+    flex-wrap: wrap
+    
 }
 
 .pixel{
@@ -49,10 +52,11 @@
     border: 1px;
     border-color: black;
     border-style: solid;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: inline-block;
     background-color: white;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    
 }
 
 #clear-board{
