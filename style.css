@@ -1,3 +1,7 @@
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
 #title{
   display: flex;
   flex-direction: row;
@@ -16,7 +20,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 
 #black{
@@ -53,16 +56,11 @@
     border-style: solid;
     display: inline-block;
     background-color: white;
-    padding: 0px 0px;
-    margin: 0px 0px;
 }
 
 #clear-board{
-   
-}
-
-#header{
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+
