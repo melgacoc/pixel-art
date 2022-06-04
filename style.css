@@ -43,7 +43,6 @@
     justify-content: center;
     border: 1px solid black;
     flex-wrap: wrap
-    
 }
 
 .pixel{
@@ -56,7 +55,6 @@
     background-color: white;
     padding: 0px 0px;
     margin: 0px 0px;
-    
 }
 
 #clear-board{
