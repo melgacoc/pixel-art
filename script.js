@@ -1,4 +1,3 @@
-// eslint-disable-next-line max-lines-per-function
 window.onload = function () {
     function clear(pixelColor) {
         for (index = 0; index < pixelColor.length; index += 1) {
@@ -25,26 +24,22 @@ window.onload = function () {
     //escolhendo cor da paleta
     const collor = document.getElementsByClassName('color');
     const collorselect = document.querySelector('.selected');
+    let pickedCollor = document.querySelector('.selected').id;
 
-    function collorSelected(){
+    function collorSelected() {
         collorselect.classList.remove(collorselect);
         event.target.add(collorselect);
     }
-    for(index = 0; index < collor.length; index +1){
-        collor[index]addEventListener('click',collorSelected);
-    }
-    
-  
-      
+
     //botão de limpar
     const button = document.getElementById('clear-board');
     const pixelBackground = document.querySelectorAll('.pixel');
     button.addEventListener('click', clearBoard);
-    function clearBoard () {
+    
+    function clearBoard() {
         for (let index = 0; index < pixelBackground.length; index += 1) {
             const pixelColor = pixelBackground[index];
             pixelColor.style.backgroundColor = 'white';
         }
     }
-
 }
