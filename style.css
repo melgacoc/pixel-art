@@ -3,9 +3,7 @@
     padding: 0px 0px;
 }
 #title{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  
 }
 
 .color{
@@ -17,9 +15,7 @@
 }
 
 #color-palette{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    
 }
 
 #black{
