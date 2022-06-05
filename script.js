@@ -22,17 +22,28 @@ window.onload = function () {
     createPixels(25);
 
     //escolhendo cor da paleta
-    const collor = document.getElementsByClassName('color');
-    const collorselect = document.querySelector('.selected');
-
-    function collorSelected() {
-        collorselect.classList.remove(collorselect);
-        event.target.add(collorselect);
+    const selected = document.querySelector('.selected');
+    function changeSel() {
+        //muda o status de selecionado de uma cor ao clicar em outra
+         selected.classList.remove('selected');
+         event.target.classList.add('selected');
     }
-    for(index = 0; index < collor.length; index +1){
-        collor[index]addEventListener('click', collorSelected);
-    }
+    const pallet = document.getElementById('color-palette').children;
+     for (let index = 0; index < pallet.length; index += 1) {
+          pallet[index].addEventListener('click', changeSel);
+     }
+    //colorindo pixel
+    
+     function fill() {
+        const pickedColor = document.querySelector('.selected').id;
+         event.target.style.backgroundColor = pickedColor;
+     }
 
+     const pickedPixel = document.getElementById('pixel-board');
+     for (let index = 0; index < pickedPixel.children.length; index += 1) {
+         pickedPixel.children[index].addEventListener('click', fill);
+     }
+     
     //botão de limpar
     const button = document.getElementById('clear-board');
     const pixelBackground = document.querySelectorAll('.pixel');
@@ -44,4 +55,6 @@ window.onload = function () {
             pixelColor.style.backgroundColor = 'white';
         }
     }
+
+    
 }
