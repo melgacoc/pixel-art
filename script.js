@@ -23,12 +23,25 @@ window.onload = function () {
     createPixels(25);
 
     //escolhendo cor da paleta
-    const collor = document.getElementsByClassName('color');
-    const collorselect = document.querySelector('.selected');
+    const pallet = document.getElementById('color-palette').children;
+    for (let index = 0; index < pallet.length; index += 1) {
+         pallet[index].addEventListener('click', reclassing);
+    }
 
-    function collorSelected(){
-        collorselect.classList.remove(collorselect);
-        event.target.add(collorselect);
+    function reclassing(event) {
+        const selected = document.querySelector('.selected');
+        selected.classList.remove('selected');
+        event.target.classList.add('selected');
+    }
+
+    const pixelBoardSection = document.getElementById('pixel-board');
+    for (let index = 0; index < pixelBoardSection.children.length; index += 1) {
+        pixelBoardSection.children[index].addEventListener('click', pixelFilling);
+    }
+
+    function pixelFilling(event) {
+        const colorSelected = document.querySelector('.selected').id;
+        event.target.style.backgroundColor = colorSelected;
     }
 
 
