@@ -24,11 +24,11 @@ window.onload = function () {
 
     //escolhendo cor da paleta
     const collor = document.getElementsByClassName('color');
-    const colorselect = document.querySelector('.selected');
+    const collorselect = document.querySelector('.selected');
 
-    function collorSelected(event){
-        colorselect.classList.remove(colorselect);
-        event.target.classList.add(colorselect);
+    function collorSelected(){
+        collorselect.classList.remove(collorselect);
+        event.target.add(collorselect);
     }
 
 
