@@ -30,8 +30,9 @@ window.onload = function () {
         event.target.add(collorselect);
     }
     for(index = 0; index < collor.length; index +1){
-        collor[index]addEventListener('click',collorSelected);
-        
+        collor[index]addEventListener('click', collorSelected);
+    }
+
     //botão de limpar
     const button = document.getElementById('clear-board');
     const pixelBackground = document.querySelectorAll('.pixel');
