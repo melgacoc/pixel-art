@@ -22,21 +22,23 @@ window.onload = function () {
     createPixels(25);
 
     //escolhendo cor da paleta
+    const selected = document.querySelector('.selected');
+    const colorPalette = document.getElementById('color-palette').children;
     
-    function changeSel() {
+
+    function changeSel(event) {
         //muda o status de selecionado de uma cor ao clicar em outra
-         const selected = document.querySelector('.selected');
          selected.classList.remove('selected');
          event.target.classList.add('selected');
     }
-    const colorPalette = document.getElementById('color-palette').children;
+    
      for (let index = 0; index < colorPalette.length; index += 1) {
           colorPalette[index].addEventListener('click', changeSel);
      }
     //colorindo pixel
     
-     function fill() {
-        const pickedColor = document.querySelector('.selected').id;
+     function fill(event) {
+         const pickedColor = document.querySelector('.selected').id;
          event.target.style.backgroundColor = pickedColor;
      }
 
