@@ -30,7 +30,6 @@ window.onload = function () {
           colorPalette[index].addEventListener('click', changeSel);
      }
     //colorindo pixel
-    
      function fill() {
         const pickedColor = document.querySelector('.selected').id;
          event.target.style.backgroundColor = pickedColor;
@@ -42,11 +41,10 @@ window.onload = function () {
      }
      
     //botão de limpar
-    const button = document.getElementById('clear-board');
-    const pixelBackground = document.querySelectorAll('.pixel');
-    button.addEventListener('click', clearBoard);
-
-    function clearBoard() {
+     const button = document.getElementById('clear-board');
+     button.addEventListener('click', clearBoard);
+     function clearBoard() {
+        const pixelBackground = document.querySelectorAll('.pixel');
         for (let index = 0; index < pixelBackground.length; index += 1) {
             const pixelColor = pixelBackground[index];
             pixelColor.style.backgroundColor = 'white';
